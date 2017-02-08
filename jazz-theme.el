@@ -84,7 +84,7 @@
       (mail-unread-high '(:foreground "#135985"))
       (marked-line '(:foreground "#AA0000" :background "#FFAAAA"))
       (match '(:weight bold :background "#FBE448")) ; occur patterns
-      (ol1 `(,@(when leuven-scale-outline-headlines (list :height 1.3)) :weight bold :overline "#A7A7A7" :foreground "#3C3C3C" :background "#F0F0F0"))
+;      (ol1 `(,@(when leuven-scale-outline-headlines (list :height 1.3)) :weight bold :overline "#A7A7A7" :foreground "#3C3C3C" :background "#F0F0F0"))
       (ol2 '(:height 1.0 :weight bold :overline "#123555" :foreground "#123555" :background "#E5F4FB"))
       (ol3 '(:height 1.0 :weight bold :foreground "#005522" :background "#EFFFEF"))
       (ol4 '(:height 1.0 :weight bold :slant normal :foreground "#EA6300"))
@@ -564,7 +564,7 @@
    `(nav-face-file ((,class (:foreground ,jazz-fg))))
    `(nav-face-hfile ((,class (:foreground ,jazz-red-4))))
 
-      ;; Org non-standard faces.
+   ;; Org non-standard faces.
    `(leuven-org-deadline-overdue ((,class (:foreground "#F22659"))))
    `(leuven-org-deadline-today ((,class (:weight bold :foreground "#4F4A3D" :background "#FFFFCC"))))
    `(leuven-org-deadline-tomorrow ((,class (:foreground "#40A80B"))))
@@ -588,8 +588,8 @@
    `(org-formula ((,class (:foreground ,jazz-yellow-2))))
    `(org-headline-done ((,class (:foreground ,jazz-green+3 :strike-through t))))
    `(org-hide ((,class (:foreground ,jazz-bg-1))))
-   `(org-level-1 ((,class (:foreground ,jazz-orange))))
-   `(org-level-2 ((,class (:foreground ,jazz-green+1))))
+   `(org-level-1 ((,class (:foreground ,jazz-orange :height 2.0))))
+   `(org-level-2 ((,class (:foreground ,jazz-green+1 :height 1.1))))
    `(org-level-3 ((,class (:foreground ,jazz-blue-1))))
    `(org-level-4 ((,class (:foreground ,jazz-yellow-2))))
    `(org-level-5 ((,class (:foreground ,jazz-cyan))))
@@ -607,6 +607,10 @@
    `(org-todo ((,class (:bold t :foreground ,jazz-red :weight bold))))
    `(org-upcoming-deadline ((,class (:inherit font-lock-keyword-face))))
    `(org-warning ((,class (:bold t :foreground ,jazz-red :weight bold))))
+   `(org-clock-overlay ((,class (:foreground ,jazz-bg+3 :background ,jazz-red))))
+   `(org-agenda-clocking ((,class (:foreground ,jazz-red :background ,jazz-blue-4))))
+   `(org-agenda-current-time ((,class (:underline t :foreground ,jazz-green+2 :height 1.1))))
+
 
    ;; outline
    `(outline-8 ((,class (:inherit default))))
