@@ -508,7 +508,7 @@
 
    ;; org-mode
    `(org-agenda-date-today
-     ((,class (:foreground "white" :slant italic :weight bold))) t)
+     ((,class ( :foreground "white" :slant italic :weight bold :height 1.5 ))) t)
    `(org-agenda-structure
      ((,class (:inherit font-lock-comment-face))))
    `(org-archived ((,class (:foreground ,jazz-fg :weight bold))))
