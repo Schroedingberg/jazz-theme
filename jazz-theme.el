@@ -576,7 +576,7 @@
 
    ;; org-mode
    `(org-agenda-date-today
-     ((,class ( :foreground "white" :slant italic :weight bold :height 2.0 ))) t)
+     ((,class ( :family "Sans Serif" :foreground "white" :slant italic :weight bold :height 2.0 ))) t)
    `(org-agenda-structure ((,class (:height 1.6 :weight bold :foreground ,jazz-bg+3))))
    `(org-archived ((,class (:foreground ,jazz-fg :weight bold))))
    `(org-checkbox ((,class (:background ,jazz-bg+2 :foreground "white"
@@ -603,7 +603,7 @@
    `(org-scheduled-today ((,class (:foreground ,jazz-blue+1))))
    `(org-special-keyword ((,class (:foreground ,jazz-yellow-1))))
    `(org-table ((,class (:foreground ,jazz-green+2))))
-   `(org-tag ((,class (:bold t :weight bold :height 0.5 :foreground "#222222"))))
+   `(org-tag ((,class (:bold t :weight bold :height 0.6 :family "Times New Roman" :foreground "#222222"))))
    `(org-time-grid ((,class (:foreground ,jazz-orange))))
    `(org-todo ((,class (:bold t :foreground ,jazz-red :weight bold))))
    `(org-upcoming-deadline ((,class (:inherit font-lock-keyword-face))))
