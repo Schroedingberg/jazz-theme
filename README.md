@@ -59,3 +59,14 @@ To load it automatically on Emacs startup add this to your init file:
 
 You are more than welcome to send a pull request for any improvement you think is worth adding to the theme
 (we're colour-nazi after all, aren't we? :)).
+ 
+# Features added in this fork
+In this fork, the display of some org mode features is adapted in a way inspired by
+https://github.com/fniessen/emacs-leuven-theme.
+This includes:
+  * Large date headings in the agenda
+  * A highlighted today heading in the agenda
+
+Additionally, org-tags are "lowlighted", i.e. they are displayed in a small font and a low contrast color.
+
+

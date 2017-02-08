@@ -588,6 +588,7 @@
    `(org-headline-done ((,class (:foreground ,jazz-green+3 :strike-through t))))
    `(org-agenda-dimmed-todo-face ((,class (:foreground ,jazz-bg+3 :background ,jazz-bg))))
    `(org-hide ((,class (:foreground ,jazz-bg-1))))
+   `(org-document-title ((,class (:family "Sans Serif" :height 3.1 :weight bold :foreground "black"))))
    `(org-level-1 ((,class (:foreground ,jazz-orange :height 2.0))))
    `(org-level-2 ((,class (:foreground ,jazz-green+1 :height 1.1))))
    `(org-level-3 ((,class (:foreground ,jazz-blue-1))))
