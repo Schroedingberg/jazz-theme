@@ -48,6 +48,63 @@
 (deftheme jazz "The Jazz color theme")
 
 (let ((class '((class color) (min-colors 89)))
+      ;; Leuven generic colors.;;;;;;;;;;;;;;;;
+      (cancel '(:slant italic :strike-through t :foreground "#A9A9A9"))
+      (clock-line '(:box (:line-width 1 :color "#335EA8") :foreground "black" :background "#EEC900"))
+      (code-block '(:foreground "#000088" :background "#FFFFE0"))
+      (code-inline '(:foreground "#006400" :background "#FDFFF7"))
+      (column '(:height 1.0 :weight normal :slant normal :underline nil :strike-through nil :foreground "#E6AD4F" :background "#FFF2DE"))
+      (completion-selected-candidate '(:weight bold :foreground "white" :background "#0052A4"))
+      (completion-other-candidates '(:weight bold :foreground "black" :background "#EBF4FE"))
+      (completion-inline '(:weight normal :foreground "#C0C0C0" :inherit hl-line)) ; Like Google.
+      (diff-added '(:background "#DDFFDD"))
+      (diff-changed '(:foreground "#0000FF" :background "#DDDDFF"))
+      (diff-header '(:foreground "#800000" :background "#FFFFAF"))
+      (diff-hunk-header '(:foreground "#990099" :background "#FFEEFF"))
+      (diff-none '(:foreground "gray33"))
+      (diff-refine-added '(:background "#97F295"))
+      (diff-refine-removed '(:background "#FFB6BA"))
+      (diff-removed '(:background "#FEE8E9"))
+      (directory '(:weight bold :foreground "blue" :background "#FFFFD2"))
+      (file '(:foreground "black"))
+      (highlight-blue '(:background "#E4F1F9"))
+      (highlight-gray '(:background "#E4E4E3"))
+      (highlight-green '(:background "#D5F1CF"))
+      (highlight-red '(:background "#FFC8C8"))
+      (highlight-yellow '(:underline "#FFFF19" :background "#F6FECD"))
+      (link '(:weight normal :underline t :foreground "#006DAF"))
+      (link-no-underline '(:weight normal :foreground "#006DAF"))
+      (mail-header-name '(:family "Sans Serif" :weight normal :foreground "#A3A3A2"))
+      (mail-header-other '(:family "Sans Serif" :slant normal :foreground "#666666"))
+      (mail-read '(:foreground "#A9A9A9"))
+      (mail-read-high '(:foreground "#808080"))
+      (mail-ticked '(:foreground "#E92415"))
+      (mail-to '(:family "Sans Serif" :underline nil :foreground "#006DAF"))
+      (mail-unread '(:foreground "#0067BE"))
+      (mail-unread-high '(:foreground "#135985"))
+      (marked-line '(:foreground "#AA0000" :background "#FFAAAA"))
+      (match '(:weight bold :background "#FBE448")) ; occur patterns
+      (ol1 `(,@(when leuven-scale-outline-headlines (list :height 1.3)) :weight bold :overline "#A7A7A7" :foreground "#3C3C3C" :background "#F0F0F0"))
+      (ol2 '(:height 1.0 :weight bold :overline "#123555" :foreground "#123555" :background "#E5F4FB"))
+      (ol3 '(:height 1.0 :weight bold :foreground "#005522" :background "#EFFFEF"))
+      (ol4 '(:height 1.0 :weight bold :slant normal :foreground "#EA6300"))
+      (ol5 '(:height 1.0 :weight bold :slant normal :foreground "#E3258D"))
+      (ol6 '(:height 1.0 :weight bold :slant italic :foreground "#0077CC"))
+      (ol7 '(:height 1.0 :weight bold :slant italic :foreground "#2EAE2C"))
+      (ol8 '(:height 1.0 :weight bold :slant italic :foreground "#FD8008"))
+      (paren-matched '(:background "#C0E8C3")) ; Or take that green for region?
+      (paren-unmatched '(:weight bold :underline "red" :foreground "black" :background "#FFDCDC"))
+      (region '(:background "#8ED3FF"))
+      (shadow '(:foreground "#7F7F7F"))
+      (string '(:foreground "#008000")) ; or #D0372D
+      (subject '(:family "Sans Serif" :weight bold :foreground "black"))
+      (symlink '(:foreground "#1F8DD6"))
+      (tab '(:foreground "#E8E8E8" :background "white"))
+      (volatile-highlight '(:underline nil :foreground "black" :background "#E6B064")) ; flash-region
+      (vc-branch '(:box (:line-width 1 :color "#00CC33") :foreground "black" :background "#AAFFAA"))
+      (xml-attribute '(:foreground "#F36335"))
+      (xml-tag '(:foreground "#AE1B9A"))
+      (highlight-current-tag '(:background "#E8E8FF")) ; #EEF3F6 or #FFEB26
       ;; Jazz palette
       ;; colors with +x are lighter, colors with -x are darker
       (jazz-fg       "#c6a57b")
@@ -93,6 +150,7 @@
       (jazz-blue-5   "#385e6b")
 
       (jazz-magenta  "#7f355e"))
+  
   (custom-theme-set-faces
    'jazz
    '(button ((t (:underline t))))
@@ -506,6 +564,16 @@
    `(nav-face-file ((,class (:foreground ,jazz-fg))))
    `(nav-face-hfile ((,class (:foreground ,jazz-red-4))))
 
+      ;; Org non-standard faces.
+   `(leuven-org-deadline-overdue ((,class (:foreground "#F22659"))))
+   `(leuven-org-deadline-today ((,class (:weight bold :foreground "#4F4A3D" :background "#FFFFCC"))))
+   `(leuven-org-deadline-tomorrow ((,class (:foreground "#40A80B"))))
+   `(leuven-org-deadline-future ((,class (:foreground "#40A80B"))))
+   `(leuven-gnus-unseen ((,class (:weight bold :foreground "#FC7202"))))
+   `(leuven-gnus-date ((,class (:foreground "#FF80BF"))))
+   `(leuven-gnus-size ((,class (:foreground "#8FBF60"))))
+
+
    ;; org-mode
    `(org-agenda-date-today
      ((,class ( :foreground "white" :slant italic :weight bold :height 1.5 ))) t)
@@ -518,7 +586,7 @@
    `(org-deadline-announce ((,class (:foreground ,jazz-red-1))))
    `(org-done ((,class (:bold t :weight bold :foreground ,jazz-green+3))))
    `(org-formula ((,class (:foreground ,jazz-yellow-2))))
-   `(org-headline-done ((,class (:foreground ,jazz-green+3))))
+   `(org-headline-done ((,class (:foreground ,jazz-green+3 :strike-through t))))
    `(org-hide ((,class (:foreground ,jazz-bg-1))))
    `(org-level-1 ((,class (:foreground ,jazz-orange))))
    `(org-level-2 ((,class (:foreground ,jazz-green+1))))
