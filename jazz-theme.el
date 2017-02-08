@@ -602,7 +602,7 @@
    `(org-scheduled-today ((,class (:foreground ,jazz-blue+1))))
    `(org-special-keyword ((,class (:foreground ,jazz-yellow-1))))
    `(org-table ((,class (:foreground ,jazz-green+2))))
-   `(org-tag ((,class (:bold t :weight bold))))
+   `(org-tag ((,class (:bold t :weight bold :height 0.5 :foreground "#222222"))))
    `(org-time-grid ((,class (:foreground ,jazz-orange))))
    `(org-todo ((,class (:bold t :foreground ,jazz-red :weight bold))))
    `(org-upcoming-deadline ((,class (:inherit font-lock-keyword-face))))
