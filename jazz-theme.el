@@ -578,7 +578,6 @@
    `(org-agenda-date-today
      ((,class ( :foreground "white" :slant italic :weight bold :height 2.0 ))) t)
    `(org-agenda-structure ((,class (:height 1.6 :weight bold :foreground ,jazz-bg+3))))
-
    `(org-archived ((,class (:foreground ,jazz-fg :weight bold))))
    `(org-checkbox ((,class (:background ,jazz-bg+2 :foreground "white"
                                         :box (:line-width 1 :style released-button)))))
@@ -587,6 +586,7 @@
    `(org-done ((,class (:bold t :weight bold :foreground ,jazz-green+3))))
    `(org-formula ((,class (:foreground ,jazz-yellow-2))))
    `(org-headline-done ((,class (:foreground ,jazz-green+3 :strike-through t))))
+   `(org-agenda-dimmed-todo-face ((,class (:foreground ,jazz-bg+3 :background ,jazz-bg))))
    `(org-hide ((,class (:foreground ,jazz-bg-1))))
    `(org-level-1 ((,class (:foreground ,jazz-orange :height 2.0))))
    `(org-level-2 ((,class (:foreground ,jazz-green+1 :height 1.1))))
