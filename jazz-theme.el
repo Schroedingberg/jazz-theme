@@ -576,9 +576,9 @@
 
    ;; org-mode
    `(org-agenda-date-today
-     ((,class ( :foreground "white" :slant italic :weight bold :height 1.5 ))) t)
-   `(org-agenda-structure
-     ((,class (:inherit font-lock-comment-face))))
+     ((,class ( :foreground "white" :slant italic :weight bold :height 2.0 ))) t)
+   `(org-agenda-structure ((,class (:height 1.6 :weight bold :foreground ,jazz-bg+3))))
+
    `(org-archived ((,class (:foreground ,jazz-fg :weight bold))))
    `(org-checkbox ((,class (:background ,jazz-bg+2 :foreground "white"
                                         :box (:line-width 1 :style released-button)))))
@@ -610,6 +610,7 @@
    `(org-clock-overlay ((,class (:foreground ,jazz-bg+3 :background ,jazz-red))))
    `(org-agenda-clocking ((,class (:foreground ,jazz-red :background ,jazz-blue-4))))
    `(org-agenda-current-time ((,class (:underline t :foreground ,jazz-green+2 :height 1.1))))
+
 
 
    ;; outline
